@@ -74,8 +74,8 @@ with col2:
     st.metric("Dachlatten (Stück)", anzahl_lattten)
     st.metric("Schnürungen (alle 5 Deckbreiten)", anzahl_schnuerungen)
     st.metric("Ortgangziegel (gesamt)", 2 * anzahl_ziegel_laenge)
-'''
-# --- Materialübersicht ---
+
+
 st.subheader("📦 Materialbedarf")
 material_df = pd.DataFrame({
     "Material": [
@@ -98,18 +98,4 @@ material_df = pd.DataFrame({
 })
 st.table(material_df)
 
-# --- Visualisierung ---
-st.subheader("📊 Visualisierung: Seitenansicht – Sparren & Latten")
-fig, ax = plt.subplots(figsize=(10, 5))
-for y in range(anzahl_lattten):
-    ax.hlines(y, 0, anzahl_sparren - 1, colors='dodgerblue', linewidth=2)
-for x in range(anzahl_sparren):
-    ax.vlines(x, 0, anzahl_lattten - 1, colors='darkgreen', linewidth=1.5, linestyles='dashed')
-ax.set_title("Sparren (grün) & Latten (blau)")
-ax.set_xticks(range(anzahl_sparren))
-ax.set_yticks(range(anzahl_lattten))
-ax.invert_yaxis()
-ax.set_xlabel("Sparren")
-ax.set_ylabel("Latten (Ziegelreihen)")
-st.pyplot(fig)
-'''
+
