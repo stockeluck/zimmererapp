@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import math
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # --- App Konfiguration ---
 st.set_page_config(page_title="Satteldach Rechner", layout="wide")
@@ -74,7 +74,7 @@ with col2:
     st.metric("Dachlatten (Stück)", anzahl_lattten)
     st.metric("Schnürungen (alle 5 Deckbreiten)", anzahl_schnuerungen)
     st.metric("Ortgangziegel (gesamt)", 2 * anzahl_ziegel_laenge)
-
+'''
 # --- Materialübersicht ---
 st.subheader("📦 Materialbedarf")
 material_df = pd.DataFrame({
@@ -112,3 +112,4 @@ ax.invert_yaxis()
 ax.set_xlabel("Sparren")
 ax.set_ylabel("Latten (Ziegelreihen)")
 st.pyplot(fig)
+'''
