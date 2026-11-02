@@ -1,0 +1,9 @@
+{
+  "name": "Zimmerer Baustellen Toolbox",
+  "short_name": "Zimmerer",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101d2b",
+  "theme_color": "#101d2b",
+  "lang": "de"
+}
